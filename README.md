@@ -101,3 +101,7 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 `ng g @nrwl/angular:application dashboard --routing -p=app --style=scss --d`
 
 `ng g app dashboard --routing -p=app --style=scss --d`
+
+- Adding angular material
+
+`ng add @angular/material`
