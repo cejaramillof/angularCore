@@ -89,9 +89,15 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 `npx create-nx-workspace angular-core-workshop --preset=empty --cli=angular --npmScope=workshop`
 
 - Configure default preprocessor
+
 `ng config schematics.@nrwl/schematics:component.styleext scss`
 
 - Add Nrwl Angular Schematics
 
 `ng add @nrwl/angular`
 
+- Generate the application
+
+`ng g @nrwl/angular:application dashboard --routing -p=app --style=scss --d`
+
+`ng g app dashboard --routing -p=app --style=scss --d`
