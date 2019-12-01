@@ -90,3 +90,8 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
 - Configure default preprocessor
 `ng config schematics.@nrwl/schematics:component.styleext scss`
+
+- Add Nrwl Angular Schematics
+
+`ng add @nrwl/angular`
+
