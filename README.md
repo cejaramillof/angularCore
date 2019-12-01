@@ -82,3 +82,11 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+# Commands to Generate Project
+- Create the workspace
+
+`npx create-nx-workspace angular-core-workshop --preset=empty --cli=angular --npmScope=workshop`
+
+- Configure default preprocessor
+`ng config schematics.@nrwl/schematics:component.styleext scss`
