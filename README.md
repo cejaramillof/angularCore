@@ -125,3 +125,15 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 `ng g m home --routing`
 
 `ng g c home`
+
+-- Create projects 
+
+`ng g m projects --routing`
+
+`ng g c projects`
+
+-- Create customers 
+
+`ng g m customers --routing`
+
+`ng g c customers`
