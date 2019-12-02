@@ -105,3 +105,11 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 - Adding angular material
 
 `ng add @angular/material`
+
+- Create material module like a lib
+
+`ng g lib material`
+
+- Create core-data for services and common components 
+
+`ng g lib core-data`
