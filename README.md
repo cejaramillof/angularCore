@@ -119,3 +119,9 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 `ng g lib ui-login -p=ui`
 
 `ng g lib ui-toolbar -p=ui`
+
+-- Create home 
+
+`ng g m home --routing`
+
+`ng g c home`
