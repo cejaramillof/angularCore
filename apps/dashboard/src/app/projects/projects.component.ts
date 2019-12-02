@@ -38,8 +38,12 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectProject($event, project: { approved: boolean; details: string; id: string; percentComplete: number; title: string }): void {
+  selectProject(project: { approved: boolean; details: string; id: string; percentComplete: number; title: string }, $event?): void {
     this.selectedProject = project;
     console.log($event, project);
+  }
+
+  cancel() {
+    this.selectProject(null);
   }
 }
