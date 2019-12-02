@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@angular-core-workshop/material": ["libs/material/src/index.ts"],
-      "@angular-core-workshop/core-data": ["libs/core-data/src/index.ts"]
+      "@angular-core-workshop/core-data": ["libs/core-data/src/index.ts"],
+      "@angular-core-workshop/ui-login": ["libs/ui-login/src/index.ts"],
+      "@angular-core-workshop/ui-toolbar": ["libs/ui-toolbar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
