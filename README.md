@@ -137,3 +137,8 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 `ng g m customers --routing`
 
 `ng g c customers`
+
+
+-- Create Login Component in ui-login ib
+
+`ng g c login --project=ui-login`
