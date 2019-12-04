@@ -30,6 +30,11 @@ export class ProjectsComponent implements OnInit {
     this.projects$ = this.projectsService.all()
   }
 
+  deleteProject(project) {
+    this.projectsService.delete(project.id)
+      .subscribe(result => this.getProjects());
+  }
+
   selectProject(project: Project, $event?): void {
     this.selectedProject = project;
     console.log($event, project);

@@ -9,8 +9,8 @@ const BASE_URL = 'http://localhost:3000/';
   providedIn: 'root'
 })
 export class ProjectsService {
-  // private only works in compile time, but in runtime, there's really no concept in essentially private or public.
-  private projects: Project[] = [
+  /*
+   private projects: Project[] = [
     {
       id: '1',
       title: 'Project One',
@@ -33,14 +33,36 @@ export class ProjectsService {
       approved: true,
     }
   ];
+  */
   model = 'projects';
 
+  // private only works in compile time, but in runtime, there's really no concept in essentially private or public.
   constructor(private httpClient: HttpClient) {
   }
 
-  all(): Observable<Project[]> {
-
-    // return this.projects;
-    return this.httpClient.get<Project[]>(`${BASE_URL}${this.model}`);
+  getUrl(): string {
+    return `${BASE_URL}${this.model}`;
   }
+
+  private getUrlForId(id: number): string {
+    return `${this.getUrl()}/${id}`;
+  }
+
+  all(): Observable<Project[]> {
+    // return this.projects;
+    return this.httpClient.get<Project[]>(this.getUrl());
+  }
+
+  create(project): Observable<Project> {
+    return this.httpClient.post<Project>(this.getUrl(), project);
+  }
+
+  update(project): Observable<Project> {
+    return this.httpClient.patch<Project>(this.getUrlForId(project.id), project);
+  }
+
+  delete(projectId): Observable<Project> {
+    return this.httpClient.delete<Project>(this.getUrlForId(projectId));
+  }
+
 }
