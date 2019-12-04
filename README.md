@@ -142,3 +142,17 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 -- Create Login Component in ui-login ib
 
 `ng g c login --project=ui-login`
+
+
+-- Create projects service and interface
+
+`ng g s  projects/projects --project=core-data`
+
+`ng g i  projects/project --project=core-data`
+
+-- Install server dependencies
+
+`npm i --save-dev concurrently json-server jsonwebtoken`
+
+`"server:all": "concurrently \"npm run server\" \"ng serve\" \"npm run server:auth\"",
+ "server:auth": "node server/server.js",`

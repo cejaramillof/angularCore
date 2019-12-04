@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Project, ProjectsService} from "@angular-core-workshop/core-data";
 
 @Component({
   selector: 'app-projects',
@@ -8,38 +9,25 @@ import {Component, OnInit} from '@angular/core';
 export class ProjectsComponent implements OnInit {
   primaryColor = 'red';
   hello: string = 'World';
-  projects = [
-    {
-      id: '1',
-      title: 'Project One',
-      details: 'This is a sample project',
-      percentComplete: 20,
-      approved: false,
-    },
-    {
-      id: '2',
-      title: 'Project Two',
-      details: 'This is a sample project',
-      percentComplete: 40,
-      approved: false,
-    },
-    {
-      id: '3',
-      title: 'Project Three',
-      details: 'This is a sample project',
-      percentComplete: 100,
-      approved: true,
-    }
-  ];
-  selectedProject: { approved: boolean; details: string; id: string; percentComplete: number; title: string };
+  projects: Project[];
+  selectedProject: Project;
 
-  constructor() {
+  // projectsService;
+
+  constructor(private projectsService: ProjectsService) {
+    // this.projectsService = _ProjectsService; in es6 without typescript
   }
 
   ngOnInit() {
+    this.getProjects();
   }
 
-  selectProject(project: { approved: boolean; details: string; id: string; percentComplete: number; title: string }, $event?): void {
+  getProjects() {
+    this.projectsService.all()
+      .subscribe((result: Project[]) => this.projects = result)
+  }
+
+  selectProject(project: Project, $event?): void {
     this.selectedProject = project;
     console.log($event, project);
   }

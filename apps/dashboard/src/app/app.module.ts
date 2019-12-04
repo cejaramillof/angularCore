@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "@angular-core-workshop/material";
 import {AppRoutingModule} from "./app-routing.module";
 import {UiLoginModule} from "@angular-core-workshop/ui-login";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {UiLoginModule} from "@angular-core-workshop/ui-login";
     AppRoutingModule,
     // RouterModule.forRoot([], {initialNavigation: 'enabled'}),
     BrowserAnimationsModule,
+    HttpClientModule,
     MaterialModule,
     UiLoginModule
   ],
