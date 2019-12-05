@@ -107,8 +107,8 @@
       "id": "2",
       "title": "Project Two",
       "details": "This is a sample project",
-      "percentComplete": 40,
-      "approved": true,
+      "percentComplete": 29,
+      "approved": false,
       "startDate": null,
       "targetDate": null,
       "completionDate": null,
@@ -119,6 +119,13 @@
       "title": "TEST Project!",
       "details": "TEST",
       "percentComplete": 89,
+      "approved": true
+    },
+    {
+      "id": "L_M6SWS",
+      "title": "Test Project",
+      "details": "Detailst est",
+      "percentComplete": 22,
       "approved": true
     }
   ]
