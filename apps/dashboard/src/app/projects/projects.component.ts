@@ -46,7 +46,7 @@ export class ProjectsComponent implements OnInit {
       details: '',
       percentComplete: 0,
       approved: false
-    }
+    };
     this.selectProject(emptyProject);
   }
 
