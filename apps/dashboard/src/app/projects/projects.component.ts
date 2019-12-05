@@ -15,13 +15,13 @@ export class ProjectsComponent implements OnInit {
   selectedProject: Project;
 
   // projectsService;
-
   constructor(private projectsService: ProjectsService) {
     // this.projectsService = _ProjectsService; in es6 without typescript
   }
 
   ngOnInit() {
     this.getProjects();
+    this.resetProject();
   }
 
   getProjects() {
@@ -30,17 +30,33 @@ export class ProjectsComponent implements OnInit {
     this.projects$ = this.projectsService.all()
   }
 
-  deleteProject(project) {
-    this.projectsService.delete(project.id)
-      .subscribe(result => this.getProjects());
-  }
-
   selectProject(project: Project, $event?): void {
     this.selectedProject = project;
     console.log($event, project);
   }
 
   cancel() {
-    this.selectProject(null);
+    this.resetProject();
   }
+
+  resetProject() {
+    const emptyProject: Project = {
+      id: null,
+      title: '',
+      details: '',
+      percentComplete: 0,
+      approved: false
+    }
+    this.selectProject(emptyProject);
+  }
+
+  saveProject(project: Project) {
+    console.log('saving project', project)
+  }
+
+  deleteProject(project) {
+    this.projectsService.delete(project.id)
+      .subscribe(result => this.getProjects());
+  }
+
 }
